@@ -1,0 +1,13 @@
+name: GSmotd
+main: net.gamesketch.bukkit.motd.GSmotd
+version: 0.0.1
+website: http://www.gamesketch.net
+author: The GameSketch Community
+description: >
+             Add a simple message of the day to show players on login.
+commands:
+  setmotd:
+    description: Set the message of the day.
+    usage: |
+           /<command> message
+           Example: /<command> "Welcome to the GameSketch Network" - set the motd.
