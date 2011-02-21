@@ -24,8 +24,8 @@ import org.bukkit.event.Event.Priority;
  * @author Cogito
  */
 public class GSmotd extends JavaPlugin {
-	private final PlayerListener playerListener = new PlayerListener();
-	
+    private final PlayerListener playerListener = new PlayerListener();
+
     public GSmotd(PluginLoader pluginLoader, Server instance, PluginDescriptionFile desc, File folder, File plugin, ClassLoader cLoader) {
         super(pluginLoader, instance, desc, folder, plugin, cLoader);
     }
@@ -50,9 +50,9 @@ public class GSmotd extends JavaPlugin {
         }
         return false;
     }
-    
+
     public void onPlayerJoin(PlayerLoginEvent event) {
-    	Player player = event.getPlayer();
-    	player.sendMessage("Welcome!");
+        Player player = event.getPlayer();
+        player.sendMessage("Welcome!");
     }
 }
