@@ -38,6 +38,10 @@ public class GSmotd extends JavaPlugin {
         String commandName = command.getName().toLowerCase();
 
         if (commandName.equals("setmotd")) {
+        	if (args.length == 0) {
+            sender.sendMessage("Please enter a message.");
+            return true;
+            }
             // build the message from the arguments, one by one
             StringBuilder builder = new StringBuilder();
             for (String s : args) {
@@ -45,7 +49,9 @@ public class GSmotd extends JavaPlugin {
                 builder.append(" ");
             }
             // return the built message, minus the last space that was appended
-            message = builder.substring(0, builder.length() - 1);
+            if (builder.length() > 0) {
+                message = builder.substring(0, builder.length() - 1);
+            }
             return true;
         }
         return false;
