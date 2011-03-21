@@ -18,12 +18,14 @@ import org.bukkit.event.Event.Priority;
  */
 public class GSmotd extends JavaPlugin {
     private final PlayerListener playerListener = new LoginListener();
+    private String message;
 
     public void onDisable() {
         //PluginManager pm = getServer().getPluginManager();
     }
 
     public void onEnable() {
+        message = "Welcome!";
         // EXAMPLE: Custom code, here we just output some info so we can check all is well
         PluginDescriptionFile pdfFile = this.getDescription();
         PluginManager pm = getServer().getPluginManager();
@@ -36,6 +38,8 @@ public class GSmotd extends JavaPlugin {
         String commandName = command.getName().toLowerCase();
 
         if (commandName.equals("setmotd")) {
+            //TODO set to new message
+            message = "Welcome!";
         }
         return false;
     }
