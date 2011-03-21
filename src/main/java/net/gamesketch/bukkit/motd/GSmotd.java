@@ -17,7 +17,7 @@ import org.bukkit.event.Event.Priority;
  * @author Cogito
  */
 public class GSmotd extends JavaPlugin {
-    private final PlayerListener playerListener = new LoginListener();
+    private final PlayerListener playerListener = new LoginListener(this);
     private String message;
 
     public void onDisable() {
