@@ -44,4 +44,8 @@ public class GSmotd extends JavaPlugin {
         return false;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
 }

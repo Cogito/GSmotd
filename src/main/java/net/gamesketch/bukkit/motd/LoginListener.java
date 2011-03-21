@@ -14,7 +14,7 @@ public class LoginListener extends PlayerListener {
 
     public void onPlayerJoin(PlayerEvent event) {
         Player player = event.getPlayer();
-        player.sendMessage("Welcome!");
+        player.sendMessage(plugin.getMessage());
     }
 
 }
