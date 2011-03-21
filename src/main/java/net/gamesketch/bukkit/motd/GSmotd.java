@@ -38,8 +38,15 @@ public class GSmotd extends JavaPlugin {
         String commandName = command.getName().toLowerCase();
 
         if (commandName.equals("setmotd")) {
-            //TODO set to new message
-            message = "Welcome!";
+            // build the message from the arguments, one by one
+            StringBuilder builder = new StringBuilder();
+            for (String s : args) {
+                builder.append(s);
+                builder.append(" ");
+            }
+            // return the built message, minus the last space that was appended
+            message = builder.substring(0, builder.length() - 1);
+            return true;
         }
         return false;
     }
